@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
+/* Menu Container */
+.menu-container {
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Close Button */
+.menu-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Profile Picture */
+.profile-pic {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.profile-pic img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f0f0f0;
+}
+
+/* Divider */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+/* Menu Links */
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+}
+
+/* Logout */
+.logout {
+    margin-top: 20px;
+}
+
+.logout a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .menu-container {
+        max-width: 100%;
+    }
+    
+    .menu-links a,
+    .logout a {
+        font-size: 16px;
+    }
+}

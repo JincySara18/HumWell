@@ -1,0 +1,97 @@
+<!-- added by jincy for careerdev-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Development</title>
+  <link rel="stylesheet" href="careerdev.css">
+</head>
+<body>
+
+
+  <!-- Top Status Bar -->
+  <div class="status-bar">
+    <!-- added by jincy on 13-11-2023-->
+    <span id="clock"></span>
+    <script>
+
+        function updateClock() {
+            let now = new Date()
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            //let seconds = now.getSeconds().toString().padStart(2, '0');
+
+            let timeString = `${hours}:${minutes}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Update clock every second
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call to show time immediately
+    </script>
+    <div class="status-icons">
+        <img src="icons/MobileSignal.svg" alt="Signal">
+        <img src="icons/Wifi.svg" alt="WiFi">
+        <img src="icons/Battery.svg" alt="Battery">
+      </div>
+    
+  </div>
+
+<!-- Header -->
+<header class="header">
+    <div class="menu-icon">&#9776;</div>
+    <div class="search-bar">
+        <img src="icons/search.svg" alt="Search">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="notification-icon">
+        <img src="icons/bell.svg" alt="Notifications">
+    </div>
+</header>
+
+<main class="content">
+    
+         <div class="back-arrow"><a href="index.html">&larr;</div>
+            <h2>Career Development</h2>
+
+    <div class="career-grid">
+        <div class="career-card">
+        <img src="images/CareerBooking.jpg" alt="Career Counseling">
+             <h3>Career Counseling</h3>
+             <p>Book a session with a professional career coach to get personalized job search advice.</p>
+             <a href="#" class="btn green">Book Now</a>
+        </div>
+
+  <div class="career-card">
+    <img src="images/Resume.jpg" alt="Build Your Resume">
+    <h3>Build Your Resume</h3>
+    <p>Use our tools and templates to create or improve your resume and stand out to employers.</p>
+    <a href="#" class="btn green">Start Building</a>
+  </div>
+
+  <div class="career-card">
+    <img src="images/Laptop.jpg" alt="Job Search Tips">
+    <h3>Job Search Tips</h3>
+    <p>Get expert tips on how to apply for jobs effectively.</p>
+    <a href="#" class="btn green">Explore Tips</a>
+  </div>
+
+  <div class="career-card">
+    <img src="images/interview.jpg" alt="Interview Preparation">
+    <h3>Interview Preparation</h3>
+    <p>Prepare for interviews with mock questions and tips.</p>
+    <a href="#" class="btn green">Learn More</a>
+  </div>
+</div>
+</main>
+
+ <!-- Bottom Navigation -->
+ <nav class="bottom-nav">
+    <a href="#"><img src="icons/home.svg" alt="Home"></a>
+    <a href="#"><img src="icons/briefcase.svg" alt="Briefcase"></a>
+    <a href="#"><img src="icons/shield.svg" alt="Shield"></a>
+    <a href="#"><img src="icons/chat.svg" alt="Chat"></a>
+</nav>
+</body>
+</html>

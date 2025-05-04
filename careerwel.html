@@ -1,0 +1,121 @@
+<!--sonia-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Career Wellness</title>
+    <link rel="stylesheet" href="careerwel.css">
+</head>
+<body>
+
+    <!-- Top Status Bar -->
+    <div class="status-bar">
+        <!-- added by jincy on 13-11-2023-->
+        <span id="clock"></span>
+        <script>
+    
+            function updateClock() {
+                let now = new Date()
+                let hours = now.getHours().toString().padStart(2, '0');
+                let minutes = now.getMinutes().toString().padStart(2, '0');
+                //let seconds = now.getSeconds().toString().padStart(2, '0');
+    
+                let timeString = `${hours}:${minutes}`;
+                document.getElementById('clock').textContent = timeString;
+            }
+    
+            // Update clock every second
+            setInterval(updateClock, 1000);
+            updateClock(); // Initial call to show time immediately
+        </script>
+        <div class="status-icons">
+            <img src="icons/MobileSignal.svg" alt="Signal">
+            <img src="icons/Wifi.svg" alt="WiFi">
+            <img src="icons/Battery.svg" alt="Battery">
+          </div>
+        
+      </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="menu-icon">&#9776;</div>
+        <div class="search-bar">
+            <img src="icons/search.svg" alt="Search">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="notification-icon">
+            <img src="icons/bell.svg" alt="Notifications">
+        </div>
+    </header>
+
+    <!-- Page Content -->
+     <!-- added by jincy on 13-11-2023-->
+    <main class="content">
+        <div class="back-arrow">&larr; Career</div>
+
+        <!-- Category Tabs -->
+        <div class="tab-bar" id="tabBar">
+            <div class="tab active">All</div>
+            <div class="tab">Resume Building</div>
+            <div class="tab">Interview Preparation</div>
+            <div class="tab">Career Planning</div>
+            <div class="tab">Internships</div>
+            <div class="tab">Work-Life Balance</div>
+            <div class="tab">Mentoring</div>
+          </div>
+          
+
+        <!-- Career Development Section -->
+        <section class="card">
+            <div class="card-text">
+                <h2>Career Development</h2>
+                <p>Lorem ipsum dolor sit amet</p>
+                <a href="careerdev.html">View More →</a>
+            </div>
+            <img src="icons/Meditation.svg" alt="Lotus Icon">
+        </section>
+
+        <!-- Financial Planning & Work-Life Balance -->
+        <div class="grid">
+            <div class="grid-item">
+                <img src="images/download.jpg" width="150" alt="Finance">
+                <p>Financial Planning</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/bookplan.jpg" width="150" alt="Work Life">
+                <p>Work-Life Balance</p>
+            </div>
+        </div>
+
+        <!-- Quote Section -->
+        <section class="quote">
+            <p>“Lorem Ipsum adipiscing elit. Vestibulum at sapien”</p>
+            <img src="icons/quote.svg" alt="Quote">
+        </section>
+
+        <!-- 1-on-1 Sessions -->
+        <section class="card">
+            <div class="card-text">
+                <h2>1 on 1 Sessions</h2>
+                <p>Let’s open up to the things that matter the most</p>
+                <div class="book-now-wrapper">
+                    <a href="#">Book Now <img src="icons/calendar.svg" alt="Calendar"></a>
+                  </div>
+             <!--   <a href="#">Book Now <img src="icons/calendar.svg" alt="Calendar"></a> -->
+            </div>
+            <img src="icons/Layer2.svg" alt="Session Icon">
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html"><img src="icons/home.svg" alt="Home"></a>
+        <a href="careerwel.html"><img src="icons/briefcase.svg" alt="Briefcase"></a>
+        <a href="#"><img src="icons/shield.svg" alt="Shield"></a>
+        <a href="aichatbuddy.html"><img src="icons/chat.svg" alt="Chat"></a>
+    </nav>
+
+</body>
+</html>

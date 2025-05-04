@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    background: white;
+    min-height: 100vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 60px;
+}
+
+header {
+    padding: 20px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar input {
+    flex-grow: 1;
+    padding: 8px;
+    margin: 0 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #eee;
+    padding: 8px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 8px;
+    flex-grow: 1;
+}
+
+main {
+    padding: 20px;
+}
+
+.therapist-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.therapist-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.info {
+    flex-grow: 1;
+}
+
+.info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.info p {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 3px;
+}
+
+.info strong {
+    color: black;
+}
+
+.book-now {
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.therapist-card .fa-heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: gray;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    max-width: 450px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer i {
+    font-size: 20px;
+    color: gray;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .menu-container {
+        max-width: 100%;
+    }
+    
+    .menu-links a,
+    .logout a {
+        font-size: 16px;
+    }
+}

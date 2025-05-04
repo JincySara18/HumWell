@@ -1,0 +1,156 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="indexcss.css" />
+</head>
+<body>
+
+<!-- Top Status Bar -->
+<div class="status-bar">
+  <span id="clock"></span>
+  <div class="status-icons">
+    <div><img src="icons/MobileSignal.svg" alt="Network" /></div>
+    <div><img src="icons/Battery.svg" alt="Battery" /></div>
+    <div><img src="icons/Wifi.svg" alt="WiFi" /></div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="menu-icon" id="hamburger">&#9776;</div>
+  <div class="sprout-logo"><img src="icons/Humwell_Sprout 3.svg" alt="Logo"></div>
+  <div class="notification">
+    <img src="icons/bell.svg" alt="Notifications" />
+    <span class="badge">3</span>
+  </div>
+</header>
+
+<!-- Overlay Background -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Overlay Menu Content -->
+<div class="menu-overlay" id="menuOverlay">
+  <span class="close-btn" id="closeOverlay">&times;</span>
+
+  <!-- added for the new humwell logo -->
+  <div class="logo-wrapper">
+      <img src="icons/Humwell_Logo1.svg" alt="logo">
+  </div>
+
+  <ul class="menu-items">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">Career</a></li>
+    <li><a href="#">Support</a></li>
+    <li><a href="#">Settings</a></li>
+  </ul>
+</div>
+
+
+<main class="scroll-container">
+
+<!-- User Name -->
+<div class="user-name">
+  <h1>Hi, Serah! <img src="icons/Streak.svg" alt="Streak" /></h1>
+</div>
+
+<!-- Categories -->
+<div class="categories">
+  <button class="active">All</button>
+  <button>Mental wellness</button>
+  <button>Physical wellness</button>
+</div>
+
+<!-- Scrollable Content Area -->
+<!-- <main class="scroll-container"> -->
+
+  <!-- Card Sections -->
+  <section class="dashboard">
+    <div class="row-1">
+      <div class="daily-challenge card">
+        <h2>Daily Challenge 💧</h2>
+        <p>The recommended water consumption per day is 8 ounces. Let's start the day with a glass!</p>
+      </div>
+      <!--<div class="streak card">🔥 Streak</div>-->
+    </div>
+
+    <div class="row-2">
+
+    <div class="streakcard"><img src="images/Dashboard.jpg" alt="Streak"></div>
+    </div>
+
+    <!--
+    
+    <div class="row-">
+      <div class="mood-bar card">😌 Mood Bar</div>
+      <div class="chat-with-ai-buddy card">
+        <button onclick="location.href='aichatbuddy.html'">Chat with AI Buddy</button>
+      </div>
+    </div> -->
+
+  </section>
+
+  <!-- Mood Section -->
+  <section class="mood">
+    <p>How are you feeling today?</p>
+    <div class="mood-options">
+      <div class="mood-item">😊 Happy</div>
+      <div class="mood-item">😐 Neutral</div>
+      <div class="mood-item">😑 Meh</div>
+      <div class="mood-item">😢 Sad</div>
+      <div class="mood-item">😟 Stressed</div>
+    </div>
+  </section>
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById('hamburger');
+      const overlay = document.getElementById('overlay');
+      const menuOverlay = document.getElementById('menuOverlay');
+      const closeOverlay = document.getElementById('closeOverlay');
+    
+      if (hamburger && overlay && menuOverlay && closeOverlay) {
+        hamburger.addEventListener('click', () => {
+          overlay.classList.add('show');
+          menuOverlay.classList.add('show');
+        });
+    
+        overlay.addEventListener('click', () => {
+          overlay.classList.remove('show');
+          menuOverlay.classList.remove('show');
+        });
+    
+        closeOverlay.addEventListener('click', () => {
+          overlay.classList.remove('show');
+          menuOverlay.classList.remove('show');
+        });
+      }
+    });
+    </script>
+    
+<!-- Bottom Navigation -->
+<nav class="bottom-nav">
+  <a href="#"><img src="icons/home.svg" alt="Home" /></a>
+  <a href="careerwel.html"><img src="icons/briefcase.svg" alt="Briefcase" /></a>
+  <a href="#"><img src="icons/shield.svg" alt="Shield" /></a>
+  <a href="aichatbuddy.html"><img src="icons/chat.svg" alt="Chat" /></a>
+</nav>
+
+<script>
+  function updateClock() {
+    let now = new Date();
+    let hours = now.getHours().toString().padStart(2, '0');
+    let minutes = now.getMinutes().toString().padStart(2, '0');
+    document.getElementById('clock').textContent = `${hours}:${minutes}`;
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    text-align: center;
+}
+
+/* Top Navigation */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-icon, .bell-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.search-bar input {
+    width: 70%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.back-btn {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Therapist Card */
+.therapist-card {
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px;
+    position: relative;
+}
+
+.therapist-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.therapist-info h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.heart-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Dates Section */
+.dates {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.dates button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dates .disabled {
+    background: #444;
+    color: white;
+}
+
+.dates .available {
+    background: white;
+    border: 1px solid #ccc;
+}
+
+/* No Slots */
+.date-status {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.no-slots {
+    color: gray;
+}
+
+/* Next Availability */
+.next-availability {
+    background: #444;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    width: 80%;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.or-text {
+    color: gray;
+    margin: 15px 0;
+}
+
+.contact-clinic {
+    background: white;
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 16px;
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.bottom-nav img {
+    width: 24px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .search-bar input {
+        width: 60%;
+    }
+
+    .therapist-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .dates {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dates button {
+        width: 80%;
+    }
+}
